@@ -1,10 +1,17 @@
 package click.seichi.sayonararomaji
 
-import org.bukkit.plugin.java.JavaPlugin
+import net.md_5.bungee.api.plugin.Plugin
 
-class SayonaraRomaji : JavaPlugin() {
+class SayonaraRomaji : Plugin() {
+    companion object {
+        lateinit var PLUGIN: SayonaraRomaji
+            private set
+    }
+
     override fun onEnable() {
-        // Plugin startup logic
+        PLUGIN = this
+
+        proxy.pluginManager.registerListener(this, ChatEventListener())
     }
 
     override fun onDisable() {
