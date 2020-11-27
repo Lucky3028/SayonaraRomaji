@@ -1,7 +1,6 @@
 buildscript {
     ext {
         kotlin_version = "1.4.20"
-        spigot_version = "1.12.2-R0.1-SNAPSHOT"
         bungee_version = "1.12-SNAPSHOT"
     }
     repositories {
@@ -41,7 +40,6 @@ repositories {
 
 dependencies {
     implementation "net.md-5:bungeecord-api:$bungee_version"
-    implementation "org.spigotmc:spigot-api:$spigot_version"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     embed "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile fileTree(dir: "libs", include: "*.jar")
